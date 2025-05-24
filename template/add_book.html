@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kitob qo'shish</title>
+</head>
+<body>
+            <div class="py-3 bg-primary">
+                <div class="container">
+                    <a class="text-white" href="{% url 'saxifa' %}">Bosh sahifa /</a>
+                </div>
+            </div>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-2">
+                </div>
+                <div class="col-6">
+                     <h3>Kitob qo'shish</h3>
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ forms.as_p }}
+                       <div style="overflow: hidden;">
+                            <button type="submit" class="btn btn-primary" style="float: left;">qo'shish</button>
+                       </div>
+
+                    </form>
+                </div>
+                <div class="col-4"></div>
+
+
+            </div>
+        </div>
+
+
+</body>
+</html>
